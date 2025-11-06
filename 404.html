@@ -1,0 +1,55 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    // CHANGE THIS to your GitHub username
+    const GITHUB_USERNAME = "KeshavAnandCode";
+
+    // Extract the path after the domain
+    const endpoint = window.location.pathname.replace(/^\//, "");
+
+    // Build redirect URL
+    const target = endpoint
+      ? `https://github.com/${GITHUB_USERNAME}/${endpoint}`
+      : `https://github.com/${GITHUB_USERNAME}`;
+
+    // Redirect immediately
+    window.location.replace(target);
+  </script>
+</head>
+<body>
+  <!-- Fallback for no-JS -->
+  <p>If you are not redirected automatically, <a href="https://github.com/KeshavAnandCode">click here</a>.</p>
+</body>
+</html>
+
+
+<!-- 404.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages uses 404.html for all unknown endpoints
+    const GITHUB_USERNAME = "KeshavAnandCode";
+
+    // Extract attempted path
+    const endpoint = window.location.pathname.replace(/^\//, "");
+
+    // Build redirect URL
+    const target = endpoint
+      ? `https://github.com/${GITHUB_USERNAME}/${endpoint}`
+      : `https://github.com/${GITHUB_USERNAME}`;
+
+    // Redirect
+    window.location.replace(target);
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
